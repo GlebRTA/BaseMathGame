@@ -1,4 +1,12 @@
 package com.example.basemathgame.domain.usecases
 
-class GetGameSettingsUseCase {
+import com.example.basemathgame.domain.entity.GameSetting
+import com.example.basemathgame.domain.entity.Level
+import com.example.basemathgame.domain.repository.GameRepository
+
+class GetGameSettingsUseCase(private val repository: GameRepository) {
+
+    operator fun invoke(level: Level): GameSetting {
+        return repository.getGameSettings(level)
+    }
 }
