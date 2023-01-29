@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">BaseMathGame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="number_composition">Number composition</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="continue_use">continue</string>
+    <string name="game_rules">
+Rules of the game: you will have three figures in front of you, two from below and one from above, two of them will have
+numbers. It is necessary that the sum of the numbers from the two lower figures be equal to the number in the upper figure,
+to do this, you need to insert the missing number.\n\nExample: the number 10 is in the upper circle,
+in one from the lower question mark, and in the other the number 3. So in place of the question mark shouldbe the number 7 because 3 + 7 = 10
+    </string>
+    <string name="choose_level">Choose level:</string>
+    <string name="test">Test</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="question_mark">\?</string>
+    <string name="correct_answers">Correct answers %s (minimum %s)</string>
+    <string name="required_number_answer">Required number of correct answers: %s</string>
+    <string name="score">Your score: %s</string>
+    <string name="required_percentage">Required percentage of correct answers: %s</string>
+    <string name="your_percentage">Your percentage: %s</string>
+    <string name="try_again">Try again</string>
 </resources>
