@@ -68,7 +68,7 @@ class GameViewModel(
         startGame()
     }
 
-    fun startGame() {
+    private fun startGame() {
         getGameSettings()
         startTimer()
         generateQuestion()

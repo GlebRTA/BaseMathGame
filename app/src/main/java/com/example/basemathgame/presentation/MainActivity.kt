@@ -12,13 +12,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        launchWelcomeScreen()
-    }
-
-    private fun launchWelcomeScreen() {
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.main_container, WelcomeFragment.newInstance())
-            .commit()
     }
 }

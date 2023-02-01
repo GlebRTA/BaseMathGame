@@ -12,5 +12,11 @@ data class GameResult(
 ) : Parcelable {
 
     val countPercentOfRightAnswers: Int
-        get() = countOfRightAnswers * 100 / countOfQuestions
+        get() {
+            return try {
+                countOfRightAnswers * 100 / countOfQuestions
+            } catch (e: java.lang.Exception) {
+                0
+            }
+        }
 }
