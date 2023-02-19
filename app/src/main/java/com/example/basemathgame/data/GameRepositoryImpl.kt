@@ -4,12 +4,10 @@ import com.example.basemathgame.domain.entity.GameSetting
 import com.example.basemathgame.domain.entity.Level
 import com.example.basemathgame.domain.entity.Question
 import com.example.basemathgame.domain.repository.GameRepository
+import javax.inject.Inject
 import kotlin.random.Random
 
-object GameRepositoryImpl : GameRepository {
-
-    private const val MIN_SUM_VALUE = 2
-    private const val MIN_ANSWER_VALUE = 1
+class GameRepositoryImpl @Inject constructor() : GameRepository {
 
     override fun generateQuestion(maxSumValue: Int, countOfOptions: Int): Question {
         val sum = Random.nextInt(MIN_SUM_VALUE, maxSumValue + 1)
@@ -60,6 +58,11 @@ object GameRepositoryImpl : GameRepository {
                 )
             }
         }
+    }
+
+    companion object {
+        private const val MIN_SUM_VALUE = 2
+        private const val MIN_ANSWER_VALUE = 1
     }
 
 }
