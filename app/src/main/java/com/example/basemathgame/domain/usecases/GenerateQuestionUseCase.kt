@@ -2,8 +2,11 @@ package com.example.basemathgame.domain.usecases
 
 import com.example.basemathgame.domain.entity.Question
 import com.example.basemathgame.domain.repository.GameRepository
+import javax.inject.Inject
 
-class GenerateQuestionUseCase(private val repository: GameRepository) {
+class GenerateQuestionUseCase @Inject constructor(
+    private val repository: GameRepository
+) {
 
     operator fun invoke(maxSumValue: Int): Question {
         return repository.generateQuestion(maxSumValue, COUNT_OF_OPTIONS)

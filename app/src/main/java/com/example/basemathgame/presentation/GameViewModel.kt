@@ -13,18 +13,16 @@ import com.example.basemathgame.domain.entity.Level
 import com.example.basemathgame.domain.entity.Question
 import com.example.basemathgame.domain.usecases.GenerateQuestionUseCase
 import com.example.basemathgame.domain.usecases.GetGameSettingsUseCase
+import javax.inject.Inject
 
-class GameViewModel(
+class GameViewModel @Inject constructor(
+    private val generateQuestionUseCase: GenerateQuestionUseCase,
+    private val getGameSettingsUseCase: GetGameSettingsUseCase,
     private val application: Application,
     private val level: Level
 ) : ViewModel() {
 
     private lateinit var gameSetting: GameSetting
-
-    private val repository = GameRepositoryImpl
-
-    private val generateQuestionUseCase = GenerateQuestionUseCase(repository)
-    private val getGameSettingsUseCase = GetGameSettingsUseCase(repository)
 
     private var timer: CountDownTimer? = null
 

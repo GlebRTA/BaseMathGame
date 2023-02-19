@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.basemathgame.domain.entity.Level
 
+/*
 class GameViewModelFactory(
     private val level: Level,
     private val application: Application
@@ -16,4 +17,4 @@ class GameViewModelFactory(
         }
         throw RuntimeException("unknown view model $modelClass")
     }
-}
+}*/
